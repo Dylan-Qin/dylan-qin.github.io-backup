@@ -226,7 +226,7 @@ Dr. Chuan Qin is currently an Associate Professor at the Computer Network Inform
 - Information Processing and Management (IPM)
 - Frontiers of Computer Science (FCS)
   
-## Seniro Program Committee Member/Program Committee Member: 
+## Area Chair/Seniro Program Committee Member/Program Committee Member: 
 - The ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD-2022,2023,2024,2025,2026)
 - The International Conference on Machine Learning (ICML-2022,2023,2024,2025,2026)
 - The ACM Web Conference (WWW-2023,2024,2025,2026)
