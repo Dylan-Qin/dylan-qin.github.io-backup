@@ -38,7 +38,7 @@ Dr. Chuan Qin is currently an Associate Professor at the Computer Network Inform
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var MAX_VISIBLE = 15;
+  var MAX_VISIBLE = 12;
   var headings = document.querySelectorAll('h1, h2');
   var newsHeading = null;
   for (var i = 0; i < headings.length; i++) {
@@ -61,20 +61,38 @@ document.addEventListener('DOMContentLoaded', function() {
   for (var j = MAX_VISIBLE; j < items.length; j++) {
     items[j].style.display = 'none';
   }
+  var hidden = items.length - MAX_VISIBLE;
+  var wrapper = document.createElement('div');
+  wrapper.style.cssText = 'display:flex;align-items:center;gap:10px;margin:10px 0 14px;';
+  var line = function() {
+    var hr = document.createElement('div');
+    hr.style.cssText = 'flex:1;height:1px;background:#ddd;';
+    return hr;
+  };
   var btn = document.createElement('a');
-  btn.textContent = 'Show More News ▼';
   btn.href = '#';
-  btn.style.cssText = 'display:inline-block;margin:6px 0 10px;font-size:0.9em;cursor:pointer;';
+  btn.style.cssText = 'white-space:nowrap;font-size:0.82em;color:#224b8d;text-decoration:none;padding:3px 12px;border:1px solid #224b8d;border-radius:20px;transition:all .2s;';
+  btn.onmouseover = function(){ this.style.background='#224b8d'; this.style.color='#fff'; };
+  btn.onmouseout  = function(){ this.style.background=''; this.style.color='#224b8d'; };
+  wrapper.appendChild(line());
+  wrapper.appendChild(btn);
+  wrapper.appendChild(line());
   var expanded = false;
+  var update = function() {
+    btn.textContent = expanded
+      ? '↑ Show Less'
+      : '↓ Show ' + hidden + ' More News';
+  };
+  update();
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     expanded = !expanded;
     for (var k = MAX_VISIBLE; k < items.length; k++) {
       items[k].style.display = expanded ? '' : 'none';
     }
-    btn.textContent = expanded ? 'Show Less ▲' : 'Show More News ▼';
+    update();
   });
-  newsList.insertAdjacentElement('afterend', btn);
+  newsList.insertAdjacentElement('afterend', wrapper);
 });
 </script>
 
