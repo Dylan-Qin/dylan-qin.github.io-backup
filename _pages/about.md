@@ -36,7 +36,49 @@ Dr. Chuan Qin is currently an Associate Professor at the Computer Network Inform
 - *2025.01*: &nbsp;🎉🎉 Our evaluation platform for AI4Science, [SciHorizon](https://www.scihorizon.cn/), is now live. Stay tuned!
 - *2025.01*: &nbsp;🎉🎉 Two paper have been accepted by TMIS. Congrats to all the collaborators!
 
-# 📝 Publications 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var MAX_VISIBLE = 15;
+  var headings = document.querySelectorAll('h1, h2');
+  var newsHeading = null;
+  for (var i = 0; i < headings.length; i++) {
+    if (headings[i].textContent.indexOf('News') !== -1) {
+      newsHeading = headings[i];
+      break;
+    }
+  }
+  if (!newsHeading) return;
+  var newsList = null;
+  var next = newsHeading.nextElementSibling;
+  while (next) {
+    if (next.tagName === 'UL') { newsList = next; break; }
+    if (['H1', 'H2', 'H3'].includes(next.tagName)) break;
+    next = next.nextElementSibling;
+  }
+  if (!newsList) return;
+  var items = newsList.querySelectorAll('li');
+  if (items.length <= MAX_VISIBLE) return;
+  for (var j = MAX_VISIBLE; j < items.length; j++) {
+    items[j].style.display = 'none';
+  }
+  var btn = document.createElement('a');
+  btn.textContent = 'Show More News ▼';
+  btn.href = '#';
+  btn.style.cssText = 'display:inline-block;margin:6px 0 10px;font-size:0.9em;cursor:pointer;';
+  var expanded = false;
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    expanded = !expanded;
+    for (var k = MAX_VISIBLE; k < items.length; k++) {
+      items[k].style.display = expanded ? '' : 'none';
+    }
+    btn.textContent = expanded ? 'Show Less ▲' : 'Show More News ▼';
+  });
+  newsList.insertAdjacentElement('afterend', btn);
+});
+</script>
+
+# 📝 Publications
 (* Corresponding Authors, + Co-first Authors) 
 
 ## Technical Reports:
