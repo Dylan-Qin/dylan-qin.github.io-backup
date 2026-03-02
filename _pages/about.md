@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
 - IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE)
 - IEEE Transactions on Neural Networks and Learning Systems (IEEE TNNLS)
 - ACM Transactions on Information Systems (ACM TOIS)
-- ACM Transactions on Knowledge Discovery from Data (TKDD)
+- ACM Transactions on Knowledge Discovery from Data (ACM TKDD)
 - Information Processing and Management (IPM)
 - Frontiers of Computer Science (FCS)
   
