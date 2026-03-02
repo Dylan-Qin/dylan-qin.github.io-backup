@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ## In the Year of 2026:
 - Yunchu Bai, Chao Wang, Ying Sun, **<u>Chuan Qin</u>**, Wei Wu, Hui Xiong. Graph-based Prompt Learning with Mixture of Experts for Multi-task Corporate Profiling. ACM Transactions on Knowledge Discovery from Data **(ACM TKDD)**, 2026.
 
-- Hongke Zhao, Yuhan Su, **<u>Chuan Qin</u>**, Dazhong Shen, Hengshu Zhu. AI-Driven Skill Keyword Suggestion for Multi-Round Interviews: A Graph-Based Topic Approach. Information Processing and Management **(IPM)**, 2026.
+- Yuhan Su, Hongke Zhao, **<u>Chuan Qin</u>**, Dazhong Shen, Hengshu Zhu. AI-Driven Skill Keyword Suggestion for Multi-Round Interviews: A Graph-Based Topic Approach. Information Processing and Management **(IPM)**, 2026.
 
 - Xi Chen, **<u>Chuan Qin*</u>**, Ziqi Wang, Shasha Hu, Chao Wang, Hengshu Zhu, Hui Xiong*. Beyond the Known: An Unknown-Aware Large Language Model for Open-Set Text Classification. In the Fourteenth International Conference on Learning Representations **(ICLR-2026)**. 2026.
 
